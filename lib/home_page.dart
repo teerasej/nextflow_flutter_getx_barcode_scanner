@@ -22,10 +22,12 @@ class HomePage extends StatelessWidget {
               child: Text('Scan Barcode'),
             ),
             SizedBox(height: 16),
-            Text(
-              'Scan result will appear here',
-              style: TextStyle(fontSize: 18),
-            ),
+            Obx(() {
+              return Text(
+                "${controller.barcodeValue.value}",
+                style: TextStyle(fontSize: 18),
+              );
+            }),
           ],
         ),
       ),
