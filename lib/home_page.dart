@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nextflow_flutter_getx_barcode_scanner/barcode_controller.dart';
 
 class HomePage extends StatelessWidget {
+  var controller = Get.put(BarcodeController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +17,7 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // TODO: Implement barcode scanning logic
+                controller.startScan();
               },
               child: Text('Scan Barcode'),
             ),
