@@ -28,6 +28,20 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               );
             }),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                controller.saveBarcode();
+              },
+              child: Text('Save Barcode value'),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                controller.loadBarcode();
+              },
+              child: Text('Load Barcode value'),
+            ),
           ],
         ),
       ),
